@@ -1,0 +1,252 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  body {
+    font-family: "Jersey 20", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    background-color: #f5f5f5;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+  }
+
+  #navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: #333;
+    color: white;
+    padding: 10px;
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  #navbar .site-info {
+    display: flex;
+    align-items: center;
+  }
+
+  #navbar .site-info img {
+    width: 40px;
+    height: 40px;
+    margin-right: 10px;
+  }
+
+  #navbar ul {
+    list-style: none;
+    display: flex;
+    justify-content: space-around;
+  }
+
+  #navbar ul li {
+    margin-left: 20px;
+  }
+
+  #navbar a {
+    color: white;
+    text-decoration: none;
+  }
+
+  #welcome-section {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #595959;
+    position: relative;
+    padding: 20px;
+    color: white;
+  }
+
+  #welcome-section .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-align: left;
+    width: 1000px
+  }
+
+  #welcome-section .text-container {
+    max-width: 60%;
+  }
+
+  #welcome-section h1 {
+    font-size: 3rem;
+    margin-bottom: 20px;
+  }
+
+  #welcome-section h2 {
+    margin-bottom: 20px;
+  }
+
+  #welcome-section .image-frame {
+    position: relative;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    width: 300px;
+    height: 300px;
+  }
+
+  #welcome-section .image-frame img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  #projects {
+    padding: 20px;
+    background: linear-gradient(to bottom, #C22424, #595959);
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+  }
+
+  #projects .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+  }
+
+  .projects-heading {
+    width: 100%;
+    text-align: center;
+    margin-bottom: 20px; 
+  }
+
+  .projects-heading h2 {
+    font-size: 2rem;
+    color: white;
+  }
+
+  .project-tile {
+    position: relative;
+    width: calc(30% - 20px);
+    overflow: hidden;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  }
+
+  .project-tile img {
+    width: 100%;
+    height: 300px;
+    display: block;
+  }
+
+  .project-tile .label {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    background-color: #333; 
+    color: white; 
+    text-align: center;
+    padding: 10px;
+    font-size: 1.2rem;
+  }
+
+  #contact-section {
+    padding: 20px;
+    background-color: #595959; 
+    color: white;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    margin-top: auto;
+  }
+
+  #contact-section .contact-text {
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+  }
+
+  #contact-section .contact-text .hey {
+    font-size: 1.5rem; 
+    font-weight: bold;
+    margin-bottom: 10px; 
+  }
+
+  #contact-section a {
+    color: white;
+    text-decoration: none;
+    margin: 10px;
+  }
+
+  #contact-section a:hover {
+    text-decoration: underline;
+  }
+
+  #contact-section .discord-logo,
+  #contact-section .phone-logo,
+  #contact-section .contact-page-logo {
+    width: 40px;
+    height: 40px;
+  }
+
+  @media (max-width: 768px) {
+    #navbar ul {
+      flex-direction: column;
+    }
+
+    #welcome-section .image-frame {
+      position: static;
+      margin-top: 20px;
+      transform: none;
+    }
+
+    #welcome-section .text-container {
+      text-align: center;
+      margin-right: 0;
+    }
+
+    .project-tile {
+      width: calc(45% - 20px);
+    }
+
+    #contact-section {
+      flex-direction: column;
+      gap: 10px;
+    }
+  }
+
+  @media (max-width: 480px) {
+    .project-tile {
+      width: 100%;
+    }
+
+    #contact-section {
+      flex-direction: column;
+      gap: 10px;
+    }
+  }
+
+  #footer {
+    background-color: #333; /* Same as header background */
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+  }
+
+  #footer a {
+    color: white;
+    text-decoration: none;
+    margin: 0 15px;
+  }
+
+  #footer a:hover {
+    text-decoration: underline;
+  }
